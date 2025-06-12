@@ -8,3 +8,4 @@ export default axios.create({
       "Bearer KYa0WJPuoVaE1XNx5pClnHPalw7NPWWgClaUkWG6_2r5nj5CK2bvEeSLlUteebd_ODDrFnqhppSGx0ZUICWEEa663gqcPY7p_KX3evAq0r7BVnlm7r9vHqbhZoKKZ3Yx"
   }
 });
+//https://swapi.info/api/people
