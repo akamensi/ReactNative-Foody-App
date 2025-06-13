@@ -1,7 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const ResultsShowScreen = () => {
+const ResultsShowScreen = ({ route }) => {
+  const { id } = route.params || {}; // Safely destructure `id` (fallback to empty object)
+  console.log(`ResultsShowScreen id: ${id}`);
   return (
     <View>
       <Text>ResultsShowScreen</Text>
