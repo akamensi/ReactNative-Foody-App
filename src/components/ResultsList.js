@@ -11,6 +11,10 @@ import ResultsDetail from "./ResultsDetail";
 
 const ResultsList = ({ title, results }) => {
   const navigation = useNavigation();
+
+  if (!results.length) {
+    return null; // If there are no results, return null to avoid rendering the list
+  }
   return (
     <View style={styles.containerStyle}>
       <Text style={styles.titleStyle}> {title} </Text>
