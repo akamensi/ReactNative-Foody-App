@@ -26,10 +26,10 @@ const SearchScreen = () => {
       />
       {errorMessage ? <Text>{errorMessage}</Text> : null}
       <Text>We have found {results.length} results</Text>
-      <ResultsList resutls={filterResultsByPrice("$")} title="Cost Effective" />
-      <ResultsList resutls={filterResultsByPrice("$$")} title="Bit Pricier" />
-      <ResultsList resutls={filterResultsByPrice("$$$")} title="Big Spender" />
-      <ResultsList resutls={filterResultsByPrice("$$$$")} title="The Luxury" />
+      <ResultsList results={filterResultsByPrice("$")} title="Cost Effective" />
+      <ResultsList results={filterResultsByPrice("$$")} title="Bit Pricier" />
+      <ResultsList results={filterResultsByPrice("$$$")} title="Big Spender" />
+      <ResultsList results={filterResultsByPrice("$$$$")} title="The Luxury" />
     </View>
   );
 };
