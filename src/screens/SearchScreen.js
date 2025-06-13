@@ -18,14 +18,16 @@ const SearchScreen = () => {
   };
 
   return (
-    <View style={{ flex: 1 }}>
+    // <View style={{ flex: 1 }}>
+    // Using Fragment <></> to avoid unnecessary View wrapper
+    <>
       <SearchBar
         searchTerm={searchTerm}
         onSearchTermChange={setSearchTerm}
         onSearchTermSubmit={() => searchApi(searchTerm)}
       />
       {errorMessage ? <Text>{errorMessage}</Text> : null}
-      <Text>We have found {results.length} results</Text>
+      {/* <Text>We have found {results.length} results</Text> */}
       <ScrollView>
         <ResultsList
           results={filterResultsByPrice("$")}
@@ -41,7 +43,8 @@ const SearchScreen = () => {
           title="The Luxury"
         />
       </ScrollView>
-    </View>
+    </>
+    // </View>
   );
 };
 
