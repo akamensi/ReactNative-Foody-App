@@ -5,10 +5,12 @@ import {
   FlatList,
   TouchableOpacity
 } from "react-native";
-import React from "react";
+//import { withNavigation } from "react-navigation";
+import { useNavigation } from "@react-navigation/native";
 import ResultsDetail from "./ResultsDetail";
 
-const ResultsList = ({ title, results, navigation }) => {
+const ResultsList = ({ title, results }) => {
+  const navigation = useNavigation();
   return (
     <View style={styles.containerStyle}>
       <Text style={styles.titleStyle}> {title} </Text>
@@ -16,7 +18,7 @@ const ResultsList = ({ title, results, navigation }) => {
         horizontal
         showsHorizontalScrollIndicator={false}
         data={results}
-        keyExtractor={(resutl) => resutl.id}
+        keyExtractor={(result) => result.id}
         renderItem={({ item }) => {
           return (
             <TouchableOpacity onPress={() => navigation.navigate("Show")}>
